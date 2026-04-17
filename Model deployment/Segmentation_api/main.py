@@ -6,6 +6,7 @@ from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from services.customer_service import CustomerService
 import pandas as pd
+import os
 
 app = FastAPI(
     title="Customer Intelligence API",
@@ -22,9 +23,13 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+ #  Use absolute path instead of relative path 
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+DATA_PATH = os.path.join(BASE_DIR, "data", "rfm_customer_segments.csv")
+
 
 # Initialize service
-service = CustomerService("data/rfm_customer_segments.csv")
+service = CustomerService(DATA_PATH)
 
 
 @app.get("/")
@@ -51,3 +56,8 @@ def get_customer(customer_id: int):
         "vip_subsegment": vip_subsegment,
         "rfm": service.format_rfm(row)
     }
+# dynamic port support 
+if __name__ == "__main__":
+    import uvicorn
+    port = int(os.environ.get("PORT", 8000))  
+    uvicorn.run("main:app", host="0.0.0.0", port=port)
