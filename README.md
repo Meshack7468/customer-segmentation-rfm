@@ -1,4 +1,4 @@
-# OVERVIEW
+## OVERVIEW
 
 This project focuses on customer segmentation using RFM (Recency, Frequency, Monetary) analysis to better understand customer purchasing behavior and support data-driven business decisions.
 
@@ -6,7 +6,7 @@ It combines data processing, interactive visualization, and API development to d
 
 By grouping the transactional data into meaningful segments, the system provides a clear view of the most valuable groups, those at risk of churn, and areas of growth
 
-# BUSINESS PROBLEM
+## BUSINESS PROBLEM
 
 In most retail businesses, buyers are often treated as a single group in marketing and engagement strategies, despite exhibiting different purchasing behaviors. This makes it difficult to effectively understand overall customer value across the business.
 
@@ -14,7 +14,7 @@ Segmenting buyers based on purchasing behavior allows businesses to move beyond 
 
 This approach provides actionable insights that support targeted campaigns, improved retention strategies, and more efficient business performance.
 
-# DATA UNDERSTANDING
+## DATA UNDERSTANDING
 
 The dataset used is the Online Retail Dataset from the UCI Machine Learning Repository, which contains real-world e-commerce transaction data capturing purchasing behavior over time.
 
@@ -26,17 +26,17 @@ Monetary – Total spending
 
 These features are used to segment records into meaningful groups.
 
-# METHODS
+## METHODS
 
 The project follows a structured workflow that begins with data preparation, where data cleaning, preprocessing, and transformation are performed to ensure the dataset is suitable for analysis. Then followed by the modeling phase, where the optimal number of clusters is determined using the Elbow Method and evaluated using the Silhouette Score, before applying K-Means clustering for segmentation. The results are then explored through a Tableau dashboard, to provides interactive visualization of the insights. Finally, the solution is deployed to enable easy, interactive access to the application.
 
-# RESULTS & INSIGHTS
+## RESULTS & INSIGHTS
 
 Findings show differences across segments.
 
 Promising segments form the largest group and contribute a significant share of revenue, indicating strong growth potential. Loyal segments are smaller in size but generate consistent revenue over time. At-risk or churned segments are many in number but contribute very little revenue, highlighting low engagement. In contrast, VIP segments are small in number but account for a disproportionately high share of revenue.
 
-# KEY VALUE
+## KEY VALUE
 
 The project delivers practical business value by:
 
@@ -46,7 +46,7 @@ Supporting targeted marketing and personalization strategies
 Improving customer lifetime value strategies
 Translating raw data into clear, actionable insights
 
-# CONCLUSION & RECOMMENDATIONS
+## CONCLUSION & RECOMMENDATIONS
 
 The results show that value is not evenly spread across segments for example a small group of VIP segments generates a disproportionately high share of revenue, while larger segments contribute significantly less. This highlights the importance of RFM segmentation and K-Means clustering in understanding purchasing behavior and enabling data-driven decision-making.
 
